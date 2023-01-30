@@ -6,7 +6,7 @@ import Rockets from './Pages/Rockets';
 
 const App = () => (
   <BrowserRouter>
-      <Navbar />
+    <Navbar />
     <div className="main">
       <Routes>
         <Route path="/" element={<Rockets />} />
