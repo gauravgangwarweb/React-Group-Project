@@ -1,13 +1,20 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Navbar from './Components/NavBar';
+import Missons from './Pages/Missons';
+import Profile from './Pages/Profile';
+import Rockets from './Pages/Rockets';
 
-const App = () => {
-  return (
-    <BrowserRouter>
+const App = () => (
+  <BrowserRouter>
+      <Navbar />
+    <div className="main">
       <Routes>
-        <Route path='/' component="" />
+        <Route path="/" element={<Rockets />} />
+        <Route path="/missons" element={<Missons />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
-    </BrowserRouter>
-  );
-}
+    </div>
+  </BrowserRouter>
+);
 
 export default App;
