@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Kalam:wght@300&display=swap');
+
+body {
+  margin: 0;
+}
+
+.main {
+  padding: 5px 55px 5px 40px;
+}

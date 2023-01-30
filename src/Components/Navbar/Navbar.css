@@ -1,0 +1,70 @@
+.header {
+  height: 70px;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 14px 28px, rgba(0, 0, 0, 0.22) 0 10px 10px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 55px 5px 40px;
+}
+
+.logo-div {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 0 20px 0 20px;
+}
+
+.logo {
+  height: 8%;
+  width: 8%;
+}
+
+.logo-heading {
+  display: flex;
+  gap: 2%;
+  font-family: 'Aboreto', cursive;
+}
+
+.logo-text-1 {
+  color: #f68d36;
+}
+
+.logo-text-2 {
+  color: #9d36f6;
+}
+
+.logo-text-3 {
+  color: #d70e5b;
+}
+
+.nav-links {
+  display: flex;
+  font-size: 1.2rem;
+  font-family: 'Kalam', cursive;
+}
+
+.home-link {
+  padding-right: 25px;
+  text-decoration: none;
+  border-right: 1px solid;
+}
+
+.missons-link {
+  padding-right: 25px;
+  padding-left: 25px;
+  text-decoration: none;
+  border-right: 1px solid;
+}
+
+.profile-link {
+  padding-left: 25px;
+  text-decoration: none;
+}
+
+.active {
+  color: red;
+}
