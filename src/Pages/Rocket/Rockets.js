@@ -21,7 +21,7 @@ const Rockets = () => {
     <div className="list">
       {
         rocketsData.map((rocket) => (
-          <RocketCard key={rocket.id} id={rocket.id} data={rocket} />
+          <RocketCard key={rocket.id} data={rocket} />
         ))
       }
     </div>
