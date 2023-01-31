@@ -1,22 +1,26 @@
 import './RocketCard.css';
+import PropTypes from 'prop-types';
 
 const RocketCard = (props) => {
+  const { data } = props;
   const {
-    id, image, name, description, reserved,
-  } = props;
+    id, name, description, flickrImage,
+  } = data;
   return (
-    <div className="card" key={id}>
-      <div className="card-image">
-        <img src={image} alt="" />
-      </div>
-      <div>
+    <div className="card">
+      <img className="card-image" src={flickrImage} alt="" />
+      <div className="card-dtls">
         <div />
-        <h2>{name}</h2>
-        <p>{description}</p>
-        <button>Reserve Rocket</button>
+        <h2 className="card-title">{name}</h2>
+        <p className="card-dtls">{description}</p>
+        <button id={id} type="button" className="card-btns">Reserve Rocket</button>
       </div>
     </div>
   );
+};
+
+RocketCard.propTypes = {
+  data: PropTypes.node.isRequired,
 };
 
 export default RocketCard;
