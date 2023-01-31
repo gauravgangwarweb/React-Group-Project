@@ -2,21 +2,13 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 
 const initialState = [];
 
-const FETCH_ROCKETS = 'space-hub/rockets/FETCH_ROCKETS';
 const ADD_DATA = 'space-hub/rockets/ADD_DATA';
 
 const url = 'https://api.spacexdata.com/v3/rockets';
 
-export const addRocket = (payload) => (
-  {
-    type: ADD_DATA,
-    payload,
-  }
-);
-
 export const getAllRockets = createAsyncThunk(
-  FETCH_ROCKETS,
-  async (get, { dispatch }) => {
+  ADD_DATA,
+  async () => {
     const resp = await fetch(url);
     const data = await resp.json();
     const rocketsArray = [];
@@ -30,13 +22,13 @@ export const getAllRockets = createAsyncThunk(
       };
       rocketsArray.push(rocket);
     });
-    dispatch(addRocket(rocketsArray));
+    return rocketsArray;
   },
 );
 
 const rocketReducer = (state = initialState, action) => {
   switch (action.type) {
-    case ADD_DATA:
+    case `${ADD_DATA}/fulfilled`:
       return [...state, ...action.payload];
     default:
       return state;
