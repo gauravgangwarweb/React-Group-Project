@@ -25,7 +25,7 @@ export const getAllRockets = createAsyncThunk(
         id: e.id,
         name: e.rocket_name,
         description: e.description,
-        flickr_image: e.flickr_images[0],
+        flickrImage: e.flickr_images[0],
         reserved: false,
       };
       rocketsArray.push(rocket);
