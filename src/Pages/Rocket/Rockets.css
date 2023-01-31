@@ -3,4 +3,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 40px 0 40px 0;
+    gap: 25px;
 }
