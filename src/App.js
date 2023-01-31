@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Navbar from './Components/Navbar/NavBar';
-import Missons from './Pages/Missons';
-import Profile from './Pages/Profile';
-import Rockets from './Pages/Rockets';
+import Missons from './Pages/Missons/Missons';
+import Profile from './Pages/Profile/Profile';
+import Rockets from './Pages/Rocket/Rockets';
 
 const App = () => (
   <BrowserRouter>

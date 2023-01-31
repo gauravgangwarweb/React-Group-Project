@@ -1,0 +1,18 @@
+.card {
+    display: flex;
+    width: 90%;
+    height: 250px;
+    box-sizing: border-box;
+    border: 1px solid red;
+}
+
+.card-image {
+    width: 30%;
+}
+
+.card-image img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
