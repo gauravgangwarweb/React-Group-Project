@@ -24,9 +24,23 @@
   font-family: 'Aboreto', cursive;
 }
 
-.card-btns {
+.card-btn-1 {
   background-color: #007bff;
   padding: 10px 15px 10px 15px;
   color: white;
   border: 0;
+}
+
+.card-btn-2 {
+  background-color: white;
+  color: #999ea4;
+  border: 2px solid #999ea4;
+  padding: 10px 15px 10px 15px;
+}
+
+.card-reserve {
+  background-color: #18a2b8;
+  color: azure;
+  padding: 5px 10px 5px 10px;
+  border-radius: 10px;
 }

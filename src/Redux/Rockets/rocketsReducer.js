@@ -3,6 +3,8 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 const initialState = [];
 
 const ADD_DATA = 'space-hub/rockets/ADD_DATA';
+const RESERVE_ROCKET = 'space-hub/rockets/RESERVE_ROCKET';
+const CANCEL_RESERVATION = 'space-hub/rockets/CANCEL_RESERVATION';
 
 const url = 'https://api.spacexdata.com/v3/rockets';
 
@@ -26,10 +28,38 @@ export const getAllRockets = createAsyncThunk(
   },
 );
 
+export const reserveRocket = (rocketID) => ({
+  type: RESERVE_ROCKET,
+  rocketID,
+});
+
+export const cancelReseve = (rocketID) => ({
+  type: CANCEL_RESERVATION,
+  rocketID,
+});
+
 const rocketReducer = (state = initialState, action) => {
   switch (action.type) {
     case `${ADD_DATA}/fulfilled`:
       return [...state, ...action.payload];
+    case RESERVE_ROCKET: {
+      const newState = state.map((rocket) => {
+        if (rocket.id !== action.rocketID) {
+          return rocket;
+        }
+        return { ...rocket, reserved: true };
+      });
+      return newState;
+    }
+    case CANCEL_RESERVATION: {
+      const newState = state.map((rocket) => {
+        if (rocket.id !== action.rocketID) {
+          return rocket;
+        }
+        return { ...rocket, reserved: false };
+      });
+      return newState;
+    }
     default:
       return state;
   }
